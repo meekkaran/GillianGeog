@@ -1,68 +1,66 @@
 import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
+import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import {Nav} from 'react-bootstrap';
 import './style.css';
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      collapse: false,
-    };
-    this.onClick = this.onClick.bind(this);
+      super(props);
+      this.state = {
+          collapse: false,
+      };
+      this.onClick = this.onClick.bind(this);
   }
 
   onClick() {
     this.setState({
-      collapse: !this.state.collapse,
-    });
+        collapse: !this.state.collapse,
+      });
   }
 
   render() {
-    const container = { height: 1300 }
-    return (
-      <div className="topbar">
+    const bgPink = {backgroundColor: '#e91e63'}
+    const container = {height: 1300}
+    return(
+      <div className="header">
         <Router>
           <header>
-            <MDBNavbar color="default-color" dark expand="md">
+            <MDBNavbar  dark expand="md" scrolling fixed="top">
               <MDBNavbarBrand href="/">
-                <strong className="logo">NG@23 <i className="fab fa-wpexplorer"></i></strong>
+                  <strong className="logo">NG@23 <i className="fab fa-wpexplorer"></i></strong>
               </MDBNavbarBrand>
-              <MDBNavbarToggler onClick={this.onClick} />
-              <MDBCollapse isOpen={this.state.collapse} navbar>
+              <MDBNavbarToggler onClick={ this.onClick } />
+              <MDBCollapse isOpen = { this.state.collapse } navbar>
                 <MDBNavbarNav left>
                   <MDBNavItem active>
-                    <MDBNavLink to="#">Home</MDBNavLink>
+                      <Nav.Link style={{fontSize:'30px'}} href="/">Home</Nav.Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Features</MDBNavLink>
+                      <Nav.Link style={{fontSize:'30px'}} href="/About">About Me</Nav.Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Pricing</MDBNavLink>
+                      <Nav.Link style={{fontSize:'30px'}} href="/Services">Services</Nav.Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Opinions</MDBNavLink>
+                    <button className="btn1" href="/Joinme">JOIN ME</button>
                   </MDBNavItem>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="facebook-f" /></MDBNavLink>
+                    <MDBNavLink style={{fontSize:'30px'}} to="#"><MDBIcon fab icon="facebook-f" /></MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
+                    <MDBNavLink style={{fontSize:'30px'}} to="#"><MDBIcon fab icon="twitter" /></MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#"><MDBIcon fab icon="instagram" /></MDBNavLink>
+                    <MDBNavLink style={{fontSize:'30px'}} to="#"><MDBIcon fab icon="instagram" /></MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
               </MDBCollapse>
             </MDBNavbar>
           </header>
         </Router>
-        <MDBContainer style={container} className="text-center mt-5">
-          <h2>This Navbar isn't fixed</h2>
-          <h5>When you scroll down it will disappear</h5>
-        </MDBContainer>
       </div>
     );
   }
