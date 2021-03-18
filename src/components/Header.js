@@ -26,7 +26,7 @@ class Header extends React.Component {
       <div className="header">
         <Router>
           <header>
-            <MDBNavbar  dark expand="md" scrolling fixed="top">
+            <MDBNavbar  style={bgPink}  style={{backgroundColor:'green'}} dark expand="md" scrolling fixed="top">
               <MDBNavbarBrand href="/">
                   <strong className="logo">NG@23 <i className="fab fa-wpexplorer"></i></strong>
               </MDBNavbarBrand>
@@ -43,7 +43,7 @@ class Header extends React.Component {
                       <Nav.Link style={{fontSize:'30px'}} href="/Services">Services</Nav.Link>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <button className="btn1" href="/Joinme">JOIN ME</button>
+                    <Nav.Link><button className="btn1" href="/Joinme">JOIN ME</button></Nav.Link> 
                   </MDBNavItem>
                 </MDBNavbarNav>
                 <MDBNavbarNav right>

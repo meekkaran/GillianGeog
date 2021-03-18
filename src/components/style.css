@@ -66,6 +66,16 @@
     margin-bottom: 16px;
     border: 1px solid #fff;
   }
+  .btn2{
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+  }
   
   .footer-links {
     width: 100%;
@@ -165,6 +175,9 @@
     }
   
     .footer-input {
+      width: 100%;
+    }
+    .btn2{
       width: 100%;
     }
   

@@ -1,0 +1,43 @@
+.title{
+
+}
+.about{
+    margin-top: 100px;
+}
+ .title h1{
+	font-weight: bold;
+	padding: 15px;
+	font-size: 40px;
+	text-align: center;
+}
+p{
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+}
+
+.images
+{
+	width:47%;
+	height:auto;
+	margin-left: 1.5%;
+	padding:10px;
+    display:inline-block;
+	position: relative;
+}
+
+.images img
+{
+	width:100%;
+	height:100%;
+}
+
+@media screen and (max-width: 800px) {
+	.images{
+		width: 100%;
+	}
+}
+
+
+
+

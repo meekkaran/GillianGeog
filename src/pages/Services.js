@@ -3,7 +3,7 @@ import React from 'react'
 function Services() {
     return (
         <div>
-            ertyuiokjhgfdsedrtyuiol,mkjnbhdswertyuiol,mnvcxswertyh
+            <img style={{width:'100%'}}  src="../images/img-home.jpg"/>
         </div>
     )
 }
